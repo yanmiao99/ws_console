@@ -1,5 +1,5 @@
 {
-  "name": "vscode-console",
+  "name": "ws-console",
   "displayName": "vscode_console",
   "description": "快速创建一个 console.log 输出",
   "version": "1.0.0",
