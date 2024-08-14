@@ -2,8 +2,9 @@
   "name": "vscode-console",
   "displayName": "vscode_console",
   "description": "快速创建一个 console.log 输出",
-  "version": "0.0.1",
-  "author": "yanmiao",
+  "version": "1.0.0",
+  "icon": "images/icon.png",
+  "publisher": "yanmiao",
   "engines": {
     "vscode": "^1.92.0"
   },
@@ -22,6 +23,7 @@
     "keybindings": [
       {
         "command": "extension.consoleLog",
+        "key": "cmd+enter",
         "mac": "cmd+enter",
         "windows": "alt+enter"
       }
@@ -29,16 +31,19 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "pretest": "pnpm run lint",
-    "test": "vscode-test"
+    "pretest": "npm run lint",
+    "test": "vscode-test",
+    "package": "pnpm vsce package --no-dependencies",
+    "publish": "pnpm vsce publish --no-dependencies"
   },
   "devDependencies": {
-    "@types/vscode": "^1.92.0",
     "@types/mocha": "^10.0.7",
     "@types/node": "20.x",
+    "@types/vscode": "^1.92.0",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.4.0",
     "eslint": "^8.57.0",
     "typescript": "^5.4.5",
-    "@vscode/test-cli": "^0.0.9",
-    "@vscode/test-electron": "^2.4.0"
+    "vsce": "^2.15.0"
   }
 }

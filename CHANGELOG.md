@@ -1,9 +1,6 @@
-# Change Log
+# vscode console 开发日志
 
-All notable changes to the "vscode-console" extension will be documented in this file.
+## 2024 年 8 月 14 日
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
-
-- Initial release
+> 1. vscode 控制台的初始版本。
+> 2. 实现了基本功能。
