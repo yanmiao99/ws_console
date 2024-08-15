@@ -2,11 +2,11 @@
   "name": "ws-console",
   "displayName": "vscode_console",
   "description": "快速创建一个 console.log 输出",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "icon": "images/icon.png",
   "publisher": "yanmiao",
   "engines": {
-    "vscode": "^1.74.3"
+    "vscode": "^1.52.0"
   },
   "categories": [
     "Other"
@@ -43,7 +43,7 @@
   "devDependencies": {
     "@types/mocha": "^10.0.7",
     "@types/node": "20.x",
-    "@types/vscode": "^1.74.3",
+    "@types/vscode": "^1.52.0",
     "@vscode/test-cli": "^0.0.9",
     "@vscode/test-electron": "^2.4.0",
     "eslint": "^8.57.0",

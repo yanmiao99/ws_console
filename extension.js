@@ -38,11 +38,13 @@ function activate(context) {
 
 		// 插入代码
 		editor.edit(editBuilder => {
-			// 如果是变量, 则直接插入变量
-			editBuilder.insert(editor.selection.start,`console.log('${variable}=======>', ${constant ? constant : variable});`);
+			const newText = `console.log('${variable.trim()}=======>', ${constant ? constant : variable.trim()})`
 
-			// 删除前面的所有文本
-			editBuilder.delete(new vscode.Range(editor.selection.start.line, 0, editor.selection.start.line, position));
+			// 获取当前行前面有多少个空格
+			const space = lineText.match(/^\s*/)[0];
+
+			// 把当前行的所有内容替换成新的内容
+			editBuilder.replace(new vscode.Range(line.range.start, line.range.end), `${space}${newText}`);
 		});
 	}));
 }
