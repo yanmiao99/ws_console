@@ -39,7 +39,7 @@ function activate(context) {
 		// 插入代码
 		editor.edit(editBuilder => {
 			// 如果是变量, 则直接插入变量
-			editBuilder.insert(editor.selection.start, `console.log('${variable}=========>', ${constant ? constant : variable});`);
+			editBuilder.insert(editor.selection.start,`console.log('${variable}=======>', ${constant ? constant : variable});`);
 
 			// 删除前面的所有文本
 			editBuilder.delete(new vscode.Range(editor.selection.start.line, 0, editor.selection.start.line, position));

@@ -6,7 +6,7 @@
   "icon": "images/icon.png",
   "publisher": "yanmiao",
   "engines": {
-    "vscode": "^1.92.0"
+    "vscode": "^1.74.3"
   },
   "categories": [
     "Other"
@@ -25,7 +25,8 @@
         "command": "extension.consoleLog",
         "key": "cmd+enter",
         "mac": "cmd+enter",
-        "windows": "alt+enter"
+        "windows": "alt+enter",
+        "when": "editorTextFocus && !editorReadonly"
       }
     ]
   },
