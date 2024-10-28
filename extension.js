@@ -25,9 +25,18 @@ function activate(context) {
 			variable = char + variable;
 		}
 
-		// 如果变量名为空, 则不做任何操作
+		// 如果只有 .log 则替换为 console.log(光标位置)
 		if (!variable) {
-			return;
+			editor.edit(editBuilder => {
+				const newText = `console.log()`
+
+				// 获取当前行前面有多少个空格
+				const space = lineText.match(/^\s*/)[0];
+
+				// 把当前行的所有内容替换成新的内容
+				editBuilder.replace(new vscode.Range(line.range.start, line.range.end), `${space}${newText}`);
+			});
+			return
 		}
 
 		// 判断 variable 是中文和数字开头, 则直接转换为字符串
